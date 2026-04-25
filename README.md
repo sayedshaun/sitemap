@@ -1,4 +1,4 @@
-# sitemap
+# Sitemap
 
 Async sitemap crawler with an easy CLI and Python API.
 
@@ -10,16 +10,14 @@ Async sitemap crawler with an easy CLI and Python API.
 
 **Install**
 
-Install into your active virtualenv (editable mode recommended during development):
-
 ```bash
-python -m pip install -e .
+git clone https://github.com/sayedshaun/sitemap.git
+cd sitemap
 ```
 
-Or install from PyPI (when published):
-
+Then install with pip:
 ```bash
-python -m pip install sitemap
+python -m pip install .
 ```
 
 **Quick CLI Usage**
@@ -34,6 +32,11 @@ Save results to JSON (array):
 
 ```bash
 sitemap-cli "https://example.com" --output urls.json
+```
+
+Filter URLs containing "blog" and save as JSONL (one URL per line):
+```bash
+sitemap-cli "https://example.com" --output urls.jsonl --filter "blog"
 ```
 
 Quiet mode (print one URL per line):
@@ -73,18 +76,8 @@ urls, stats = crawler.run()
 print(len(urls))
 ```
 
-**Project layout**
-
-- `sitemap/cli.py` — CLI entrypoint and argument parsing.
-- `sitemap/core.py` — `SiteMap` crawler implementation.
-- `pyproject.toml` — package metadata and console script entry.
-
-See the `pyproject.toml` for the console script `sitemap-cli`.
-
 **Contributing**
 
 Contributions, issues, and improvements are welcome. Please open a GitHub issue or PR.
 
-**License**
-
-MIT — see LICENSE for details.
+**License** is licensed under the MIT License. See [LICENSE](LICENSE) for details.

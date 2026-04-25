@@ -1,0 +1,13 @@
+[project]
+name = "sitemap"
+version = "0.1.0"
+description = "Async sitemap crawler with CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp",
+    "lxml"
+]
+
+[project.scripts]
+sitemap-cli = "sitemap.cli:main"

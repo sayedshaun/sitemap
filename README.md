@@ -11,8 +11,7 @@ Async sitemap crawler with an easy CLI and Python API.
 **Install**
 
 ```bash
-git clone https://github.com/sayedshaun/sitemap.git
-cd sitemap
+pip install git+https://github.com/sayedshaun/sitemap.git
 ```
 
 Then install with pip:
